@@ -12,8 +12,19 @@
 
 <body>
 
-    <h1>Music Player</h1>
     <div class="music-container" id="music-container">
+        <div class="img-container">
+            <img src="images/WeddingRing.jpeg" alt="Album Cover" id="cover" />
+            <div class="progress-container" id="progress-container">
+<div class="progress" id="progress-bar"></div>
+        </div>
+
+        
+    </div>
+
+
+        <h1 class="player title">Music Player</h1>
+
         <div class="music-info">
             <h4 id="title"></h4>
             <!-- Progress Bar -->
@@ -31,20 +42,16 @@
         <!-- Audio Element -->
         <audio id="audio" src="music/WeddingRing.mp3"></audio>
 
-        <div class="img-container">
-            <img src="images/WeddingRing.jpeg" alt="Album Cover" id="cover" />
-        </div>
 
         <div class="navigation">
             <button id="prev" class="action-btn"><i class="fas fa-backward"></i></button>
             <button id="play" class="action-btn action-btn-big"><i class="fas fa-play"></i></button>
             <button id="next" class="action-btn"><i class="fas fa-forward"></i></button>
+            <!-- shuffle & repeat-->
+            <button id="shuffle" class="action-btn"><i class="fas fa-random"></i></button>
+            <button id="repeat" class="action-btn"><i class="fas fa-redo"></i></button>
         </div>
-    </div>
-    <!--Shuffle / Rpeat Buttons-->
-    <div class="extra-controls">
-        <button id="shuffle" class="action-btn"><i class="fas fa-random"></i></button>
-        <button id="repeat" class="action-btn"><i class="fas fa-redo"></i></button>
+
 </div>
 </body>
 
