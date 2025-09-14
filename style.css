@@ -90,7 +90,7 @@ h1 {
 .progress-container {
     background: #baa5a5;
     height: 15px;
-    width: 100;
+    width: 100%;
     border-radius: 5px;
     cursor: pointer;
     position: relative;
