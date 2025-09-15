@@ -52,6 +52,8 @@ function prevSong() {
     songIndex = (songIndex - 1 + songs.length) % songs.length;
     loadSong(songs[songIndex]);
     playSong();
+    audio.oncanplaythrough = null;
+ // Remove he event listener after the first play
 }
 
 function nextSong() {
@@ -66,11 +68,17 @@ function nextSong() {
         } while (newIndex === songIndex && songs.length > 1);
         songIndex = newIndex;
         loadSong(songs[songIndex]);
+        audio.oncanplaythrough = () => {
         playSong();
+        audio.oncanplaythrough = null; 
+        };// Remove the event listener after the first play
     } else {
         songIndex = (songIndex + 1) % songs.length;
         loadSong(songs[songIndex]);
         playSong();
+        audio.oncanplaythrough = null;
+
+
     }
 
 }
