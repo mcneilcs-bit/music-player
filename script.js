@@ -29,10 +29,7 @@ function loadSong(song) {
 }
 
 loadSong(songs[songIndex]);
-audio.oncanplaythrough = () => {
-    playSong();
-    audio.oncanplaythrough = null;
- }; // Remove the event listener after the first play
+ // Remove the event listener after the first play
 
 function playSong() {
     musicContainer.classList.add('play');
