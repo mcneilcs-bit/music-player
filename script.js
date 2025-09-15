@@ -25,9 +25,14 @@ function loadSong(song) {
     title.innerText = song;
     audio.src = `music/${song}.mp3`;
     cover.src = `images/${song}.jpeg`;
+    audio.load();
 }
 
 loadSong(songs[songIndex]);
+audio.oncanplaythrough = () => {
+    playSong();
+    audio.oncanplaythrough = null;
+ }; // Remove the event listener after the first play
 
 function playSong() {
     musicContainer.classList.add('play');
