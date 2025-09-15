@@ -16,7 +16,7 @@ const shuffleBtn = document.getElementById('shuffle');
 const repeatBtn = document.getElementById('repeat');
 // Song titles
 
-const songs = ['74', 'trouble', 'WeddingRing'];
+const songs = ['74', 'Trouble', 'WeddingRing'];
 let songIndex = 0;
 let isShuffle = false;
 let isRepeat = false;
